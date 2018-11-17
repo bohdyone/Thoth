@@ -277,6 +277,19 @@ module Encode =
     /// **Description**
     ///
     /// **Parameters**
+    ///   * `value` - parameter of type `System.TimeSpan`
+    ///
+    /// **Output Type**
+    ///   * `Value`
+    ///
+    /// **Exceptions**
+    ///
+    let timespan (value : System.TimeSpan) : Value =
+        value.ToString("c") |> string
+
+    /// **Description**
+    ///
+    /// **Parameters**
     ///   * `value` - parameter of type `System.DateTime`
     ///
     /// **Output Type**

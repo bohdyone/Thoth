@@ -180,6 +180,9 @@ module Encode =
     let uint64 (value : uint64) : JToken =
         JValue(value.ToString(CultureInfo.InvariantCulture)) :> JToken
 
+    let timespan (value: System.TimeSpan) : JToken =
+        JValue(value.ToString("c")) :> JToken
+
     let datetime (value : System.DateTime) : JToken =
         JValue(value.ToString("O", CultureInfo.InvariantCulture)) :> JToken
 
